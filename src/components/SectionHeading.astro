@@ -1,0 +1,14 @@
+---
+interface Props { eyebrow: string; title: string; description?: string; }
+const { eyebrow, title, description } = Astro.props;
+---
+<header class="section-heading">
+  <div><span class="eyebrow">{eyebrow}</span><h2>{title}</h2></div>
+  {description && <p>{description}</p>}
+</header>
+<style>
+  .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.7rem; }
+  .section-heading p { max-width: 34rem; color: var(--color-muted); }
+  :global(.section--navy) .section-heading p { color: rgb(255 255 255 / 72%); }
+  @media (max-width: 720px) { .section-heading { align-items: start; flex-direction: column; } }
+</style>

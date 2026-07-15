@@ -1,0 +1,44 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/association', label: "L’association" },
+  { href: '/programmes/mentorship-access', label: 'Mentorship Access' },
+  { href: '/programmes/mentorship-talents', label: 'Mentorship Talents' },
+  { href: '/partenaires', label: 'Partenaires' },
+  { href: '/contact', label: 'Contact' },
+];
+const isActive = (href: string) => pathname === href;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Tennis Mentors Club — Accueil">
+      <img src="/assets/images/tmc-logo.png" alt="" width="1501" height="621" />
+    </a>
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      {links.map((link) => <a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    <details class="mobile-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Navigation mobile">
+        {links.map((link) => <a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>{link.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 20; background: rgb(255 255 255 / 94%); border-bottom: 1px solid rgb(219 228 238 / 85%); backdrop-filter: blur(16px); }
+  .header-inner { display: flex; min-height: 5rem; align-items: center; justify-content: space-between; gap: 1.5rem; }
+  .brand { display: block; width: 8.8rem; flex: 0 0 auto; }
+  .brand img { width: 100%; }
+  .desktop-nav { display: flex; align-items: center; gap: clamp(0.8rem, 1.8vw, 1.5rem); }
+  nav a { color: var(--color-navy); font-size: 0.9rem; font-weight: 750; text-decoration: none; }
+  nav a:hover, nav a[aria-current='page'] { color: var(--color-blue); }
+  .mobile-menu { display: none; position: relative; }
+  summary { cursor: pointer; color: var(--color-navy); font-weight: 800; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  .mobile-menu nav { position: absolute; top: calc(100% + 1rem); right: 0; display: grid; width: min(20rem, calc(100vw - 1.4rem)); padding: 0.7rem; background: white; border: 1px solid var(--color-border); border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); }
+  .mobile-menu a { padding: 0.8rem; border-radius: 0.5rem; }
+  .mobile-menu a:hover { background: var(--color-surface); }
+  @media (max-width: 960px) { .desktop-nav { display: none; } .mobile-menu { display: block; } }
+</style>
