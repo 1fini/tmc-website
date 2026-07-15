@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+const title = 'L’association | Tennis Mentors Club';
+const description = 'Découvrez la mission de Tennis Mentors Club : accompagner, soutenir et faire grandir les jeunes joueurs et leur entourage.';
+---
+<BaseLayout {title} {description}>
+  <header class="page-hero"><div class="container"><span class="eyebrow">L’association</span><h1>Accompagner · Soutenir · Faire grandir</h1><p class="lead">Tennis Mentors Club développe des programmes, des ressources et des outils pour aider les jeunes joueurs et leurs familles à progresser dans de meilleures conditions.</p></div></header>
+  <section class="section"><div class="container feature-grid">
+    <article class="feature-card"><h2>Accompagner</h2><p>Mettre à disposition des repères, des connaissances et des outils utiles aux familles et aux jeunes joueurs.</p></article>
+    <article class="feature-card"><h2>Soutenir</h2><p>Faciliter l’accès au matériel et aux ressources qui contribuent à une progression dans de meilleures conditions.</p></article>
+    <article class="feature-card"><h2>Faire grandir</h2><p>Favoriser la transmission et créer une communauté d’entraide autour des parcours sportifs.</p></article>
+  </div></section>
+  <CTA title="Vous souhaitez échanger avec Tennis Mentors Club ?" description="Contactez l’association pour découvrir ses programmes, proposer un soutien ou construire une collaboration." />
+</BaseLayout>
+<style>.feature-card h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }</style>

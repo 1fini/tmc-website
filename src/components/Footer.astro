@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/images/tmc-logo.png" alt="Tennis Mentors Club" width="1501" height="621" />
+      <p>Accompagner · Soutenir · Faire grandir</p>
+    </div>
+    <nav aria-label="Liens utiles">
+      <a href="/association">L’association</a>
+      <a href="/partenaires">Partenaires</a>
+      <a href="/contact">Contact</a>
+      <a href="/mentions-legales">Mentions légales</a>
+    </nav>
+    <div class="external-links">
+      <a href="mailto:contact@tennismentorsclub.fr">contact@tennismentorsclub.fr</a>
+      <a href="https://www.instagram.com/tennismentorsclub/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+      <a href="https://www.helloasso.com/associations/tennis-mentors-club" target="_blank" rel="noopener noreferrer">HelloAsso <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="container footer-bottom"><p>© {new Date().getFullYear()} Tennis Mentors Club</p></div>
+</footer>
+
+<style>
+  .site-footer { padding: 4rem 0 1.5rem; color: rgb(255 255 255 / 76%); background: #05172d; }
+  .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 3rem; }
+  .footer-brand img { width: 11rem; padding: 0.65rem; background: white; border-radius: 0.55rem; }
+  .footer-brand p { margin-top: 1rem; }
+  nav, .external-links { display: grid; align-content: start; gap: 0.7rem; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: white; }
+  .footer-bottom { margin-top: 3rem; padding-top: 1.3rem; border-top: 1px solid rgb(255 255 255 / 14%); font-size: 0.85rem; }
+  @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; gap: 2rem; } }
+</style>

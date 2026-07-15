@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+const title = 'Mentorship Access | Tennis Mentors Club';
+const description = 'Mentorship Access facilite l’accès au matériel, aux connaissances, aux outils et aux ressources nécessaires pour progresser.';
+---
+<BaseLayout {title} {description}>
+  <header class="page-hero"><div class="container"><span class="eyebrow">Mentorship Access</span><h1>Mieux s’équiper, mieux comprendre, mieux avancer.</h1><p class="lead">Le programme facilite l’accès au matériel, aux connaissances, aux outils et aux ressources nécessaires pour progresser dans de meilleures conditions.</p><div class="page-actions button-row"><a class="button button--primary" href="mailto:contact@tennismentorsclub.fr?subject=Mentorship%20Access">Échanger sur le programme</a><a class="button button--outline" href="https://www.helloasso.com/associations/tennis-mentors-club" target="_blank" rel="noopener noreferrer">Soutenir sur HelloAsso</a></div></div></header>
+  <section class="section"><div class="container"><span class="eyebrow">Les axes du programme</span><h2>Cinq leviers pour faciliter les parcours.</h2><ul class="list-grid axes"><li>Informer les familles</li><li>Faciliter l’accès au matériel</li><li>Former et transmettre</li><li>Développer des outils utiles</li><li>Créer une communauté d’entraide</li></ul><p class="note">Objectif indicatif de collecte : 14 000 € pour une année pilote.</p></div></section>
+  <CTA title="Contribuez à Mentorship Access." description="Clubs, entreprises, mécènes et marques peuvent prendre contact avec TMC pour soutenir le programme." />
+</BaseLayout>
+<style>.axes { margin-top: 2.3rem; }.note { margin-top: 2rem; max-width: 42rem; }</style>

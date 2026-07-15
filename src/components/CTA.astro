@@ -1,0 +1,22 @@
+---
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+---
+<section class="cta-section">
+  <div class="container cta-box">
+    <div><span class="eyebrow">Construisons la suite</span><h2>{title}</h2><p>{description}</p></div>
+    <div class="button-row">
+      <a class="button button--lime" href="mailto:contact@tennismentorsclub.fr?subject=Partenariat%20TMC">Nous contacter</a>
+      <a class="button button--outline" href="https://www.helloasso.com/associations/tennis-mentors-club" target="_blank" rel="noopener noreferrer">Soutenir sur HelloAsso</a>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-section { padding: var(--section-space) 0; }
+  .cta-box { display: flex; align-items: end; justify-content: space-between; gap: 3rem; padding: clamp(2rem, 5vw, 4.5rem); color: white; background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light)); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+  .cta-box > div:first-child { max-width: 46rem; }
+  h2 { color: white; }
+  p { margin-top: 1rem; color: rgb(255 255 255 / 74%); }
+  .button-row { flex: 0 0 auto; }
+  @media (max-width: 900px) { .cta-box { align-items: start; flex-direction: column; } }
+</style>

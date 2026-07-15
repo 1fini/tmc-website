@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Contact | Tennis Mentors Club';
+const description = 'Contactez Tennis Mentors Club et retrouvez ses liens officiels.';
+---
+<BaseLayout {title} {description}>
+  <header class="page-hero"><div class="container"><span class="eyebrow">Contact</span><h1>Échangeons.</h1><p class="lead">Une question sur l’association, un programme ou une proposition de partenariat ? Contactez Tennis Mentors Club par email.</p></div></header>
+  <section class="section"><div class="container contact-grid">
+    <a class="contact-card contact-card--main" href="mailto:contact@tennismentorsclub.fr"><span>Email</span><strong>contact@tennismentorsclub.fr</strong></a>
+    <a class="contact-card" href="https://www.instagram.com/tennismentorsclub/" target="_blank" rel="noopener noreferrer"><span>Actualités</span><strong>Instagram <span aria-hidden="true">↗</span></strong></a>
+    <a class="contact-card" href="https://www.helloasso.com/associations/tennis-mentors-club" target="_blank" rel="noopener noreferrer"><span>Soutenir l’association</span><strong>HelloAsso <span aria-hidden="true">↗</span></strong></a>
+    <a class="contact-card" href="https://live.tennismentorsclub.fr" target="_blank" rel="noopener noreferrer"><span>Outil</span><strong>Live Score <span aria-hidden="true">↗</span></strong></a>
+  </div></section>
+</BaseLayout>
+<style>
+  .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .contact-card { display: flex; min-height: 11rem; flex-direction: column; justify-content: space-between; padding: 1.8rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); text-decoration: none; }
+  .contact-card--main { color: white; background: var(--color-navy); }
+  .contact-card span { font-size: 0.85rem; }
+  .contact-card strong { overflow-wrap: anywhere; font-size: clamp(1.2rem, 3vw, 1.8rem); }
+  .contact-card:hover { border-color: var(--color-blue); }
+  @media (max-width: 660px) { .contact-grid { grid-template-columns: 1fr; } }
+</style>

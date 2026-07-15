@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+const title = 'Mentorship Talents | Tennis Mentors Club';
+const description = 'Programme pilote 2026-2027 pour accompagner quatre jeunes joueurs du Bas-Rhin dans leur saison intensive.';
+---
+<BaseLayout {title} {description}>
+  <header class="page-hero"><div class="container"><span class="eyebrow">Mentorship Talents</span><h1>Pour que le coût d’une saison intensive ne freine pas la progression.</h1><p class="lead">Le programme pilote 2026-2027 vise à accompagner quatre jeunes joueurs du Bas-Rhin autour de trois besoins essentiels.</p><div class="page-actions button-row"><a class="button button--primary" href="mailto:contact@tennismentorsclub.fr?subject=Mentorship%20Talents">Échanger sur le programme</a><a class="button button--outline" href="https://www.helloasso.com/associations/tennis-mentors-club" target="_blank" rel="noopener noreferrer">Soutenir sur HelloAsso</a></div></div></header>
+  <section class="section"><div class="container"><span class="eyebrow">Les axes du programme</span><h2>Accompagner les besoins d’une saison intensive.</h2><div class="feature-grid axes"><article class="feature-card"><h3>S’entraîner</h3></article><article class="feature-card"><h3>S’équiper</h3></article><article class="feature-card"><h3>Se déplacer</h3></article></div><p class="note">Objectif indicatif de collecte : 12 000 €.</p></div></section>
+  <CTA title="Contribuez à Mentorship Talents." description="Clubs, entreprises, mécènes et marques peuvent prendre contact avec TMC pour soutenir le programme pilote." />
+</BaseLayout>
+<style>.axes { margin-top: 2.3rem; }.note { margin-top: 2rem; max-width: 42rem; }</style>
