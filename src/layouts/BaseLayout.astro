@@ -37,5 +37,14 @@ const socialImage = new URL('/assets/images/tmc-logo-email.png', Astro.site);
     <Header />
     <main id="contenu"><slot /></main>
     <Footer />
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      is:inline
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token":"3e1fd92397024c3e95a52cf79573eca8"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
